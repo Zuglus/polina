@@ -29,24 +29,67 @@
         </div>
     </section>
 
+    <!-- Секция портфолио -->
     <section class="portfolio">
         <div class="container">
-            <h2 class="fade-in">Портфолио</h2>
+            <h2 id="portfolio">Портфолио</h2>
             <div class="portfolio-grid">
-                <div class="fade-in portfolio-item">
+                <div class="portfolio-item" data-modal="project1">
                     <img src="images/threads.png" alt="НИТИ">
                 </div>
-
-                <div class="fade-in portfolio-item">
+                <div class="portfolio-item" data-modal="project2">
                     <img src="images/code.png" alt="КОДИИМ">
                 </div>
-
-                <div class="fade-in portfolio-item">
+                <div class="portfolio-item" data-modal="project3">
                     <img src="images/center.png" alt="В центре науки">
                 </div>
-
-                <div class="fade-in portfolio-item">
+                <div class="portfolio-item" data-modal="project4">
                     <img src="images/day.png" alt="День физики">
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальные окна для проектов -->
+        <div id="project1" class="project-modal">
+            <div class="project-modal-content">
+                <span class="close-project-modal">&times;</span>
+                <h3>НИТИ</h3>
+                <div class="project-content">
+                    <!-- Здесь будет контент проекта -->
+                    <p>Описание проекта НИТИ</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="project2" class="project-modal">
+            <div class="project-modal-content">
+                <span class="close-project-modal">&times;</span>
+                <h3>КОДИИМ</h3>
+                <div class="project-content">
+                    <!-- Здесь будет контент проекта -->
+                    <p>Описание проекта КОДИИМ</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="project3" class="project-modal">
+            <div class="project-modal-content">
+                <span class="close-project-modal">&times;</span>
+                <h3>В центре науки</h3>
+                <div class="project-content">
+                    <!-- Здесь будет контент проекта -->
+                    <p>Описание проекта В центре науки</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="project4" class="project-modal">
+            <div class="project-modal-content">
+                <span class="close-project-modal">&times;</span>
+                <h3>День физики</h3>
+                <div class="project-content">
+                    <!-- Здесь будет контент проекта -->
+                    <p>Описание проекта День физики</p>
                 </div>
             </div>
         </div>

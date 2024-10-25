@@ -152,25 +152,40 @@ body {
 /* Portfolio section */
 .portfolio {
     padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-40%, -30%);
+    width: 30%;
+    height: 30%;
+    background-image: url('../images/koltsa_fon1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.portfolio .container {
+    position: relative;
+    z-index: 2;
 }
 
 #portfolio {
-    font-size: 48px;
     font-family: 'MV-SKIFER', sans-serif;
-    margin-bottom: 4rem;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 62px;
+    letter-spacing: 0.01em;
     text-align: center;
-    position: relative;
-}
-
-#portfolio::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: rgba(79, 70, 229, 0.8);
+    margin-bottom: 4rem;
+    color: #FFFFFF;
 }
 
 .portfolio-grid {
@@ -181,11 +196,13 @@ body {
 }
 
 .portfolio-item {
+    max-width: 421px;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.05);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 .portfolio-item img {
@@ -202,6 +219,78 @@ body {
 
 .portfolio-item:hover img {
     transform: scale(1.05);
+}
+
+/* Project Modal */
+.project-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 6, 27, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.project-modal.active {
+    display: block;
+}
+
+.project-modal-content {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto;
+    position: relative;
+    backdrop-filter: blur(20px);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-modal.active .project-modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.close-project-modal {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.close-project-modal:hover {
+    color: rgba(79, 70, 229, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.project-modal h3 {
+    font-family: 'MV-SKIFER', sans-serif;
+    font-size: 32px;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.project-content {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Skills section */
@@ -477,10 +566,20 @@ body {
         margin-right: 0.5rem;
     }
 
-    #портфолио,
-    #навыки,
-    #опыт-работы {
-        font-size: 36px;
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #portfolio {
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+    .project-modal-content {
+        padding: 2rem;
+        margin: 1rem;
+        width: calc(100% - 2rem);
     }
 }
 
@@ -502,6 +601,15 @@ body {
     .modal-content {
         margin: 1rem;
         padding: 2rem;
+    }
+
+    #portfolio {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .portfolio {
+        padding: 4rem 0;
     }
 }
 
