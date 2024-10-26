@@ -17,6 +17,14 @@
 
 @font-face {
     font-family: 'Onest';
+    src: url('../fonts/Onest-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Onest';
     src: url('../fonts/Onest-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
@@ -153,22 +161,24 @@ body {
 .portfolio {
     padding: 8rem 0;
     position: relative;
+    justify-content: center;
     overflow: hidden;
 }
 
 .portfolio::before {
     content: '';
     position: absolute;
-    top: 20%;
-    left: 40%;
-    transform: translate(-40%, -30%);
-    width: 30%;
-    height: 30%;
+    top: 10%;
+    left: 0;
+    right: 0;
+    transform: translateX(-80px);
+    margin: auto;
+    width: 276px;
+    height: 299px;
     background-image: url('../images/koltsa_fon1.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    opacity: 0.1;
     z-index: 1;
 }
 
@@ -295,42 +305,95 @@ body {
 
 /* Skills section */
 .skills {
+    position: relative;
     padding: 8rem 0;
     background: linear-gradient(180deg, rgba(4, 6, 27, 0) 0%, rgba(79, 70, 229, 0.05) 100%);
 }
 
 #skills {
-    font-size: 48px;
     font-family: 'MV-SKIFER', sans-serif;
-    margin-bottom: 4rem;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 62px;
+    letter-spacing: 0.01em;
     text-align: center;
-    position: relative;
+    color: #FFFFFF;
 }
 
-#skills::after {
+.skills::before {
     content: '';
     position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: rgba(79, 70, 229, 0.8);
+    top: 90px;
+    left: 0;
+    right: 0;
+    transform: translateX(-20px);
+    margin: auto;
+    width: 276px;
+    height: 299px;
+    background-image: url('../images/koltsa_fon1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 178px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-family: 'MV-SKIFER', sans-serif;
+    font-size: 50px;
+    line-height: 52.5px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    margin-top: 2rem;
+    margin-left: 1rem;
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skills-grid::before {
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    transform: translate(140px, 390px);
+    margin: auto;
+    width: 780.5px;
+    height: 845px;
+    background-image: url('../images/portfolio.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+}
+
+.skills-margin-left{
+    width: 400px;
+    margin-left: 255px;
 }
 
 .skills-grid h3 {
     font-family: 'Onest', sans-serif;
     font-weight: 500;
-    font-size: 24px;
-    margin-bottom: 2rem;
+    font-size: 40px;
+    line-height: 49.6px;
+    letter-spacing: 0.02em;
     color: #fff;
+    margin-top: 2rem;
 }
 
 .skills-grid ul {
@@ -340,18 +403,17 @@ body {
 
 .skills-grid li {
     font-family: 'Onest', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
+    font-weight: 100;
+    font-size: 35px;
+    line-height: 46.55px;
+    letter-spacing: 0.01em;
     position: relative;
 }
 
 .skills-grid li::before {
     content: '→';
     position: absolute;
-    left: 0;
-    color: rgba(79, 70, 229, 0.8);
+    left: -40px;
 }
 
 /* Experience section */
@@ -359,30 +421,9 @@ body {
     padding: 8rem 0;
 }
 
-#experience {
-    font-size: 48px;
-    font-family: 'MV-SKIFER', sans-serif;
-    margin-bottom: 4rem;
-    text-align: center;
-    position: relative;
-}
-
-#experience::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: rgba(79, 70, 229, 0.8);
-}
-
 .job {
     margin-bottom: 4rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 20px;
     transition: all 0.3s ease;
 }
 
