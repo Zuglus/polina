@@ -72,16 +72,6 @@ body {
     position: relative;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    right: -20%;
-    background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, rgba(79, 70, 229, 0) 70%);
-    z-index: 0;
-}
-
 .hero-content {
     display: flex;
     gap: 3rem;
@@ -490,6 +480,23 @@ body {
     padding: 4rem 0;
     text-align: center;
 }
+
+.contact-btn {
+    font-family: 'Onest', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.01em;
+    position: relative;
+    background-color: white;
+    color: #3624A6;
+    padding: 15px 100px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
 
 /* Animations */
 .fade-in {
