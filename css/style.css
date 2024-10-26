@@ -75,7 +75,7 @@ body {
 .hero-content {
     display: flex;
     gap: 3rem;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     z-index: 1;
 }
@@ -112,26 +112,6 @@ body {
     line-height: 1;
     margin: 0;
     position: relative;
-    color: #fff;
-}
-
-.first-name::after,
-.last-name::after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 3px;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, rgba(79, 70, 229, 0.8) 0%, rgba(4, 6, 27, 0) 100%);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-}
-
-.first-name:hover::after,
-.last-name:hover::after {
-    transform: scaleX(1);
 }
 
 .profession-wrapper {
@@ -141,9 +121,6 @@ body {
     line-height: 27.36px;
     letter-spacing: 0.02em;
     margin-left: 4px;
-    background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     padding: 0.5rem 0;
 }
 
@@ -165,7 +142,7 @@ body {
     margin: auto;
     width: 276px;
     height: 299px;
-    background-image: url('../images/koltsa_fon1.svg');
+    background-image: url('../images/rings_with_circle.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -306,24 +283,24 @@ body {
     line-height: 62px;
     letter-spacing: 0.01em;
     text-align: center;
-    color: #FFFFFF;
+    z-index: 2;
 }
 
 .skills::before {
     content: '';
     position: absolute;
-    top: 90px;
+    top: 100px;
     left: 0;
     right: 0;
     transform: translateX(-20px);
     margin: auto;
     width: 276px;
     height: 299px;
-    background-image: url('../images/koltsa_fon1.svg');
+    background-image: url('../images/rings_with_circle.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    z-index: 1;
+    z-index: -1;
 }
 
 .profile {
@@ -434,6 +411,22 @@ body {
     z-index: 1;
 }
 
+.job:last-child::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translate(-360px, -430px);
+    margin: auto;
+    width: 780.5px;
+    height: 845px;
+    background-image: url('../images/koltsa_fon1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+}
+
 .job p {
     font-family: 'Onest', sans-serif;
     font-weight: 100;
@@ -494,22 +487,6 @@ body {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.contact-btn::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    transform: translate(-300px, -590px);
-    margin: auto;
-    width: 780.5px;
-    height: 845px;
-    background-image: url('../images/koltsa_fon1.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    z-index: 1;
 }
 
 
