@@ -3,173 +3,485 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- SEO метатеги -->
     <title>Полина Мигранова | Графический дизайнер</title>
+    <meta name="description"
+        content="Портфолио графического дизайнера Полины Миграновой. Создание современного дизайна, брендинг, иллюстрации и веб-дизайн.">
+    <meta name="keywords" content="графический дизайнер, дизайн, брендинг, логотипы, веб-дизайн, Полина Мигранова">
+    <meta name="author" content="Полина Мигранова">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Preload важных ресурсов -->
+    <link rel="preload" href="fonts/Onest-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/MV-SKIFER.otf" as="font" type="font/otf" crossorigin>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'mv-skifer': ['MV-SKIFER', 'sans-serif'],
+                        'onest': ['Onest', 'sans-serif'],
+                    },
+                    transitionTimingFunction: {
+                        'in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
+                    },
+                    boxShadow: {
+                        'lg': '0 20px 40px rgba(0, 0, 0, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Стили -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- Секция hero -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="logo">
-                    <img src="images/logo.svg" alt="Logo">
+    <header class="relative flex justify-center items-center mt-[60px] w-full overflow-hidden">
+        <div class="mx-auto w-[1200px]">
+            <div class="relative z-[1] flex justify-center items-center gap-[32px]">
+                <div class="flex flex-shrink-0 justify-center items-center h-[129px]">
+                    <img src="images/logo.svg" alt="Logo" class="w-auto h-full object-contain">
                 </div>
-                <div class="title-block">
-                    <div class="first-line">
-                        <h1 class="first-name">Полина</h1>
-                        <div class="profession-wrapper">
-                            <p class="profession">графический<br>дизайнер</p>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-[24px]">
+                        <h1 class="relative m-0 font-mv-skifer text-[78px] leading-none">Полина</h1>
+                        <div class="ml-1 py-2 font-light font-onest text-[24px] leading-[1.14] tracking-[0.02em]">
+                            графический<br>дизайнер
                         </div>
                     </div>
-                    <h1 class="last-name">Мигранова</h1>
+                    <h1 class="relative m-0 font-mv-skifer text-[78px] leading-none">Мигранова</h1>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Секция портфолио -->
-    <section class="portfolio">
-        <div class="container">
-            <h2 id="portfolio" class="fade-in">Портфолио</h2>
-            <div class="portfolio-grid fade-in">
-                <div class="portfolio-item" data-modal="project1">
-                    <img src="images/threads.png" alt="НИТИ">
+    <!--Секция портфолио-->
+    <section class="relative mt-[100px] pt-[40px] overflow-hidden">
+        <div class="relative z-[2] mx-auto w-[1200px]">
+            <!-- Заголовок с декоративным элементом -->
+            <h2
+                class="relative mb-[67px] font-mv-skifer font-normal text-[50px] text-center leading-[62px] tracking-[0.01em] fade-in">
+                <div class="top-[-25px] left-[383px] z-[-1] absolute w-[276px] h-[298.81px]">
+                    <img src="images/rings_with_circle.svg" alt="" class="w-full h-full object-contain">
                 </div>
-                <div class="portfolio-item" data-modal="project2">
-                    <img src="images/code.png" alt="КОДИИМ">
-                </div>
-                <div class="portfolio-item" data-modal="project3">
-                    <img src="images/center.png" alt="В центре науки">
-                </div>
-                <div class="portfolio-item" data-modal="project4">
-                    <img src="images/day.png" alt="День физики">
-                </div>
-            </div>
-        </div>
+                Портфолио
+            </h2>
 
-        <!-- Модальные окна для проектов -->
-        <div id="project1" class="project-modal">
-            <div class="project-modal-content">
-                <span class="close-project-modal">&times;</span>
-                <h3>НИТИ</h3>
-                <div class="project-content">
-                    <!-- Здесь будет контент проекта -->
-                    <p>Описание проекта НИТИ</p>
+            <!-- Сетка портфолио -->
+            <div class="gap-x-[29px] gap-y-[25px] grid grid-cols-2 mx-auto max-w-[871px] fade-in">
+                <div class="bg-white/5 hover:shadow-lg rounded-[20px] w-[421px] h-[256px] transition-all hover:translate-y-[-8px] duration-400 cursor-pointer overflow-hidden ease-in-out"
+                    data-modal="project1">
+                    <img src="images/threads.png" alt="НИТИ"
+                        class="w-full h-full transition-transform duration-400 ease-in-out object-cover hover:scale-105">
                 </div>
-            </div>
-        </div>
 
-        <div id="project2" class="project-modal">
-            <div class="project-modal-content">
-                <span class="close-project-modal">&times;</span>
-                <h3>КОДИИМ</h3>
-                <div class="project-content">
-                    <!-- Здесь будет контент проекта -->
-                    <p>Описание проекта КОДИИМ</p>
+                <div class="bg-white/5 hover:shadow-lg rounded-[20px] w-[421px] h-[256px] transition-all hover:translate-y-[-8px] duration-400 cursor-pointer overflow-hidden ease-in-out"
+                    data-modal="project2">
+                    <img src="images/code.png" alt="КОДИИМ"
+                        class="w-full h-full transition-transform duration-400 ease-in-out object-cover hover:scale-105">
                 </div>
-            </div>
-        </div>
 
-        <div id="project3" class="project-modal">
-            <div class="project-modal-content">
-                <span class="close-project-modal">&times;</span>
-                <h3>В центре науки</h3>
-                <div class="project-content">
-                    <!-- Здесь будет контент проекта -->
-                    <p>Описание проекта В центре науки</p>
+                <div class="bg-white/5 hover:shadow-lg rounded-[20px] w-[421px] h-[256px] transition-all hover:translate-y-[-8px] duration-400 cursor-pointer overflow-hidden ease-in-out"
+                    data-modal="project3">
+                    <img src="images/center.png" alt="В центре науки"
+                        class="w-full h-full transition-transform duration-400 ease-in-out object-cover hover:scale-105">
                 </div>
-            </div>
-        </div>
 
-        <div id="project4" class="project-modal">
-            <div class="project-modal-content">
-                <span class="close-project-modal">&times;</span>
-                <h3>День физики</h3>
-                <div class="project-content">
-                    <!-- Здесь будет контент проекта -->
-                    <p>Описание проекта День физики</p>
+                <div class="bg-white/5 hover:shadow-lg rounded-[20px] w-[421px] h-[256px] transition-all hover:translate-y-[-8px] duration-400 cursor-pointer overflow-hidden ease-in-out"
+                    data-modal="project4">
+                    <img src="images/day.png" alt="День физики"
+                        class="w-full h-full transition-transform duration-400 ease-in-out object-cover hover:scale-105">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="skills">
-        <div class="container">
-            <h2 id="skills" class="fade-in">Резюме</h2>
-            <div class="profile">
-                <div class="fade-in profile-image">
-                    <img src="images/foto.png" alt="Полина Мигранова">
+    <!--Секция умения-->
+    <section class="relative mt-[100px] pt-[40px] overflow-visible">
+        <div class="relative mx-auto w-[1200px]">
+            <!-- Заголовок с декоративным элементом -->
+            <h2
+                class="relative mb-[51px] font-mv-skifer font-normal text-[50px] text-center leading-[62px] tracking-[0.01em] fade-in">
+                <div class="top-[-26px] left-[440px] z-[-1] absolute w-[276px] h-[298.81px]">
+                    <img src="images/rings_with_circle.svg" alt="" class="w-full h-full object-contain">
                 </div>
-                <div class="fade-in profile-name">
+                Резюме
+            </h2>
+
+            <!-- Профиль -->
+            <div class="flex justify-center items-center gap-[20px] -mt-[40px] mb-[20px]">
+                <!-- Изменил на -mt-[40px] -->
+                <div class="flex-shrink-0 mt-[20px] rounded-full w-[178px] h-[183.74px] overflow-hidden fade-in">
+                    <img src="images/foto.png" alt="Полина Мигранова" class="w-full h-full object-cover">
+                </div>
+                <div
+                    class="flex items-center w-[347px] font-mv-skifer font-normal text-[50px] leading-[52.5px] tracking-[0.01em] fade-in">
                     Полина<br>
                     Мигранова
                 </div>
             </div>
-            <div class="skills-grid">
-                <div class="skills-margin-left fade-in">
-                    <h3>Hard skills</h3>
-                    <ul>
-                        <li>Power Point</li>
-                        <li>Figma</li>
-                        <li>Photoshop, Illustrator, Indesign</li>
+
+            <!-- Skills Grid -->
+            <div class="relative flex flex-col items-start -mt-[20px] ml-[526px] overflow-visible">
+
+                <!-- Декоративный элемент (большой круг) -->
+                <div class="top-[70px] -left-[180px] z-[-1] absolute opacity-100 w-[780.5px] h-[845px]">
+                    <img src="images/portfolio.svg" alt="" class="w-full h-full object-contain">
+                </div>
+
+                <!-- Hard Skills -->
+                <div class="mb-[48px] fade-in">
+                    <h3 class="mb-[9px] font-medium font-onest text-[40px] leading-[49.6px] tracking-[0.02em]">
+                        Hard skills
+                    </h3>
+                    <ul
+                        class="inline-block font-light font-onest text-[35px] text-left leading-[46.55px] tracking-[0.01em]">
+                        <li class="relative mb-[8px]">
+                            <span class="-left-[40px] absolute">→</span>
+                            Power Point
+                        </li>
+                        <li class="relative mb-[8px]">
+                            <span class="-left-[40px] absolute">→</span>
+                            Figma
+                        </li>
+                        <li class="relative">
+                            <span class="-left-[40px] absolute">→</span>
+                            Photoshop,<br>Illustrator, Indesign
+                        </li>
                     </ul>
                 </div>
-                <div class="skills-margin-left fade-in">
-                    <h3>Soft skills</h3>
-                    <ul>
-                        <li>Системность</li>
-                        <li>Креативность</li>
-                        <li>Ответственность</li>
+
+                <!-- Soft Skills -->
+                <div class="fade-in">
+                    <h3 class="mb-[9px] font-medium font-onest text-[40px] leading-[49.6px] tracking-[0.02em]">
+                        Soft skills
+                    </h3>
+                    <ul
+                        class="inline-block font-light font-onest text-[35px] text-left leading-[46.55px] tracking-[0.01em]">
+                        <li class="relative mb-[8px]">
+                            <span class="-left-[40px] absolute">→</span>
+                            Системность
+                        </li>
+                        <li class="relative mb-[8px]">
+                            <span class="-left-[40px] absolute">→</span>
+                            Креативность
+                        </li>
+                        <li class="relative">
+                            <span class="-left-[40px] absolute">→</span>
+                            Ответственность
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
+        </div>
+        </div>
     </section>
 
-    <section class="experience">
-        <div class="container">
-            <div class="fade-in job">
-                <p>2023-по наст. время</p>
-                <h3>Центр Педагогического Мастерства
-                    <br>
+    <!--Секция опыт работы-->
+    <section class="relative mt-[100px]">
+        <!-- Декоративный элемент кольца -->
+        <div class="bottom-[-420px] left-[300px] z-[-1] absolute w-[780.5px] h-[845px]">
+            <img src="images/koltsa_fon1.svg" alt="" class="w-full h-full object-contain">
+        </div>
+        <div class="mx-auto w-[1200px]">
+            <!-- Первый блок опыта -->
+            <div class="relative mb-[77px] pl-[493px] fade-in">
+                <!-- Декоративный круг -->
+                <div class="-top-[15px] left-[450px] absolute flex items-center w-[84px] h-[84px] -translate-x-full">
+                    <!-- Изменил left и добавил -top -->
+                    <img src="images/kruzhok_opyt_raboty.svg" alt="" class="w-full h-full object-contain">
+                </div>
+
+                <!-- Период -->
+                <p
+                    class="mb-[2px] w-[360px] font-extralight font-onest text-[35px] leading-[46.55px] tracking-[0.01em]">
+                    2023-по наст. время
+                </p>
+
+                <!-- Компания и должность -->
+                <h3 class="mb-[7px] w-[474px] font-medium font-onest text-[35px] leading-[43.75px] tracking-[0.01em]">
+                    Центр Педагогического Мастерства
+                </h3>
+                <h3 class="mb-[7px] w-[405px] font-medium font-onest text-[35px] leading-[46.55px] tracking-[0.01em]">
                     Графический дизайнер
                 </h3>
-                <ul class="job-details">
-                    <li>Фирменный стиль</li>
-                    <li>SMM-дизайн (соцсети)</li>
-                    <li>Презентации</li>
-                    <li>Полиграфия</li>
+
+                <!-- Список обязанностей -->
+                <ul
+                    class="pl-[40px] w-[436px] font-extralight font-onest text-[35px] leading-[46.55px] tracking-[0.01em]">
+                    <li class="relative mb-[8px]">
+                        <span class="-left-[40px] absolute">→</span>
+                        Фирменный стиль
+                    </li>
+                    <li class="relative mb-[8px]">
+                        <span class="-left-[40px] absolute">→</span>
+                        SMM-дизайн (соцсети)
+                    </li>
+                    <li class="relative mb-[8px]">
+                        <span class="-left-[40px] absolute">→</span>
+                        Презентации
+                    </li>
+                    <li class="relative">
+                        <span class="-left-[40px] absolute">→</span>
+                        Полиграфия
+                    </li>
                 </ul>
             </div>
-            <div class="fade-in job">
-                <p>2021-2022</p>
-                <h3>
+
+            <!-- Второй блок опыта -->
+            <div class="relative pl-[493px] fade-in">
+                <!-- Декоративный круг -->
+                <div class="-top-[15px] left-[450px] absolute flex items-center w-[84px] h-[84px] -translate-x-full">
+                    <img src="images/kruzhok_opyt_raboty.svg" alt="" class="w-full h-full object-contain">
+                </div>
+
+                <!-- Период -->
+                <p
+                    class="mb-[5px] w-[360px] font-extralight font-onest text-[35px] leading-[46.55px] tracking-[0.01em]">
+                    2021-2022
+                </p>
+
+                <!-- Компания и должность -->
+                <h3 class="mb-[6px] w-[474px] font-medium font-onest text-[35px] leading-[43.75px] tracking-[0.01em]">
                     Банк УБРиР
-                    <br>
+                </h3>
+                <h3 class="mb-[15px] w-[463px] font-medium font-onest text-[35px] leading-[46.55px] tracking-[0.01em]">
                     Ведущий дизайнер
                     <br>
                     отдела коммуникаций
                 </h3>
-                <ul class="fade-in job-details">
-                    <li>Презентации</li>
-                    <li>Коммуникационный дизайн</li>
-                    <li>Полиграфия</li>
-                    <li>Лэндинги внешних мероприятий</li>
+
+                <!-- Список обязанностей -->
+                <ul
+                    class="pl-[40px] w-[377px] font-extralight font-onest text-[35px] leading-[46.55px] tracking-[0.01em] fade-in">
+                    <li class="relative mb-[8px]">
+                        <span class="-left-[40px] absolute">→</span>
+                        Презентации
+                    </li>
+                    <li class="relative mb-[8px]">
+                        <span class="-left-[40px] absolute">→</span>
+                        Коммуникационный дизайн
+                    </li>
+                    <li class="relative mb-[8px]">
+                        <span class="-left-[40px] absolute">→</span>
+                        Полиграфия
+                    </li>
+                    <li class="relative">
+                        <span class="-left-[40px] absolute">→</span>
+                        Лэндинги внешних мероприятий
+                    </li>
                 </ul>
             </div>
         </div>
-        </div>
-        </div>
     </section>
 
-    <footer class="contact">
-        <div class="container">
-            <a href="https://t.me/Koshkinap" target="_blank" class="contact-btn fade-in">связаться</a>
+    <!-- Footer с кнопкой -->
+    <footer class="relative mt-[100px] pb-[330px]">
+        <div class="mx-auto w-[1200px]">
+            <a href="https://t.me/Koshkinap" target="_blank"
+                class="inline-block flex justify-center items-center bg-white hover:opacity-80 ml-[406px] rounded-[39px] w-[388px] h-[78px] font-medium font-onest text-[#3624A6] text-[40px] text-center leading-[50px] tracking-[0.01em] transition-opacity fade-in">
+                связаться
+            </a>
         </div>
     </footer>
+
+    <!-- Модальные окна -->
+    <div id="project1" class="z-50 fixed inset-0 hidden overflow-y-auto modal">
+        <!-- Контейнер для центрирования -->
+        <div class="px-4 min-h-screen text-center">
+            <!-- Оверлей -->
+            <div class="fixed inset-0 bg-[#04061B] bg-opacity-90 transition-opacity"></div>
+
+            <!-- Трюк для центрирования модального окна -->
+            <span class="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
+
+            <!-- Само модальное окно -->
+            <div
+                class="inline-block border-white/10 bg-[#04061B] shadow-xl my-8 p-[40px] border rounded-[20px] w-full max-w-[1000px] text-left transform transition-all align-middle">
+                <!-- Кнопка закрытия -->
+                <button
+                    class="top-[20px] right-[20px] absolute flex justify-center items-center bg-white/10 hover:bg-white/20 rounded-full w-[40px] h-[40px] transition-colors"
+                    aria-label="Закрыть">
+                    <span class="text-[30px] text-white leading-none">&times;</span>
+                </button>
+
+                <!-- Заголовок -->
+                <h3 class="mb-[30px] font-mv-skifer text-[50px] text-white">НИТИ</h3>
+
+                <!-- Изображение проекта -->
+                <div class="mb-[30px] rounded-[10px] overflow-hidden">
+                    <img src="images/threads.png" alt="НИТИ" class="w-full h-auto">
+                </div>
+
+                <!-- Описание проекта -->
+                <div class="mb-[30px] font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">О проекте</h4>
+                    <p class="mb-[20px]">
+                        Кластер проектов по управлению современным образованием
+                    </p>
+                </div>
+
+                <!-- Использованные технологии -->
+                <div class="mb-[30px] font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">Использованные инструменты</h4>
+                    <ul class="space-y-[10px] pl-[20px] list-disc">
+                        <li>Figma</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Photoshop</li>
+                    </ul>
+                </div>
+
+                <!-- Результаты -->
+                <div class="font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">Результат</h4>
+                    <p>
+                        Разработан современный визуальный стиль для образовательного проекта
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КОДИИМ -->
+    <div id="project2" class="z-50 fixed inset-0 hidden overflow-y-auto modal">
+        <div class="px-4 min-h-screen text-center">
+            <div class="fixed inset-0 bg-[#04061B] bg-opacity-90 transition-opacity"></div>
+            <span class="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
+            <div
+                class="inline-block border-white/10 bg-[#04061B] shadow-xl my-8 p-[40px] border rounded-[20px] w-full max-w-[1000px] max-h-[90vh] text-left transform transition-all overflow-y-auto align-middle">
+                <button class="top-[20px] right-[20px] absolute flex justify-center items-center bg-white/10 hover:bg-white/20 rounded-full w-[40px] h-[40px] transition-colors" aria-label="Закрыть">
+                    <span class="text-[30px] text-white leading-none">&times;</span>
+                </button>
+
+                <h3 class="mb-[30px] font-mv-skifer text-[50px] text-white">КОДИИМ</h3>
+
+                <div class="mb-[30px] rounded-[10px] overflow-hidden">
+                    <img src="images/code.png" alt="КОДИИМ" class="w-full h-auto">
+                </div>
+
+                <div class="mb-[30px] font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">О проекте</h4>
+                    <p class="mb-[20px]">
+                        Проект по искусственному интеллекту для школьников
+                    </p>
+                </div>
+
+                <div class="mb-[30px] font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">Использованные инструменты</h4>
+                    <ul class="space-y-[10px] pl-[20px] list-disc">
+                        <li>Figma</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Photoshop</li>
+                    </ul>
+                </div>
+
+                <div class="font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">Результат</h4>
+                    <p>
+                        Создан современный дизайн для образовательного проекта по AI
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- В центре науки -->
+    <div id="project3" class="z-50 fixed inset-0 hidden overflow-y-auto modal">
+        <div class="px-4 min-h-screen text-center">
+            <div class="fixed inset-0 bg-[#04061B] bg-opacity-90 transition-opacity"></div>
+            <span class="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
+            <div
+                class="inline-block border-white/10 bg-[#04061B] shadow-xl my-8 p-[40px] border rounded-[20px] w-full max-w-[1000px] max-h-[90vh] text-left transform transition-all overflow-y-auto align-middle">
+                <button class="top-[20px] right-[20px] absolute flex justify-center items-center bg-white/10 hover:bg-white/20 rounded-full w-[40px] h-[40px] transition-colors" aria-label="Закрыть">
+                    <span class="text-[30px] text-white leading-none">&times;</span>
+                </button>
+
+                <h3 class="mb-[30px] font-mv-skifer text-[50px] text-white">В центре науки</h3>
+
+                <div class="mb-[30px] rounded-[10px] overflow-hidden">
+                    <img src="images/center.png" alt="В центре науки" class="w-full h-auto">
+                </div>
+
+                <div class="mb-[30px] font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">О проекте</h4>
+                    <p class="mb-[20px]">
+                        Проект по популяризации науки и созданию сообщества молодых учёных
+                    </p>
+                </div>
+
+                <div class="mb-[30px] font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">Использованные инструменты</h4>
+                    <ul class="space-y-[10px] pl-[20px] list-disc">
+                        <li>Figma</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Photoshop</li>
+                    </ul>
+                </div>
+
+                <div class="font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">Результат</h4>
+                    <p>
+                        Разработан фирменный стиль научного проекта
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- День физики -->
+    <div id="project4" class="z-50 fixed inset-0 hidden overflow-y-auto modal">
+        <div class="px-4 min-h-screen text-center">
+            <div class="fixed inset-0 bg-[#04061B] bg-opacity-90 transition-opacity"></div>
+            <span class="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
+            <div
+                class="inline-block border-white/10 bg-[#04061B] shadow-xl my-8 p-[40px] border rounded-[20px] w-full max-w-[1000px] max-h-[90vh] text-left transform transition-all overflow-y-auto align-middle">
+                <button class="top-[20px] right-[20px] absolute flex justify-center items-center bg-white/10 hover:bg-white/20 rounded-full w-[40px] h-[40px] transition-colors" aria-label="Закрыть">
+                    <span class="text-[30px] text-white leading-none">&times;</span>
+                </button>
+
+                <h3 class="mb-[30px] font-mv-skifer text-[50px] text-white">День физики</h3>
+
+                <div class="mb-[30px] rounded-[10px] overflow-hidden">
+                    <img src="images/day.png" alt="День физики" class="w-full h-auto">
+                </div>
+
+                <div class="mb-[30px] font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">О проекте</h4>
+                    <p class="mb-[20px]">
+                        Проект по популяризации физики для старшеклассников в 22 городах страны
+                    </p>
+                </div>
+
+                <div class="mb-[30px] font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">Использованные инструменты</h4>
+                    <ul class="space-y-[10px] pl-[20px] list-disc">
+                        <li>Figma</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Photoshop</li>
+                    </ul>
+                </div>
+
+                <div class="font-onest text-[20px] text-white/80">
+                    <h4 class="mb-[15px] font-medium text-[24px] text-white">Результат</h4>
+                    <p>
+                        Создан современный визуальный стиль образовательного проекта по физике
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Анимация при скролле
     const fadeElements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
@@ -15,116 +15,64 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    // Функции для работы с модальными окнами
-    function openModal(modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        
-        if (modal.classList.contains('project-modal')) {
-            setTimeout(() => {
-                modal.querySelector('.project-modal-content').style.transform = 'translateY(0)';
-                modal.querySelector('.project-modal-content').style.opacity = '1';
-            }, 10);
-        }
+    // Оптимизация загрузки логотипа
+    const logoImg = document.querySelector('.logo img');
+    if (logoImg) {
+        logoImg.loading = 'eager';
+
+        logoImg.onerror = function () {
+            console.error('Ошибка загрузки логотипа');
+            this.style.display = 'none';
+        };
     }
+});
 
-    function closeModal(modal) {
-        if (modal.classList.contains('project-modal')) {
-            modal.querySelector('.project-modal-content').style.transform = 'translateY(20px)';
-            modal.querySelector('.project-modal-content').style.opacity = '0';
-            
-            setTimeout(() => {
-                modal.classList.remove('active');
-                document.body.style.overflow = '';
-            }, 300);
-        } else {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    }
+// Функции для модальных окон
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
 
-    // Обработка модальных окон портфолио
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    const projectModals = document.querySelectorAll('.project-modal');
-    const closeProjectButtons = document.querySelectorAll('.close-project-modal');
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
 
-    portfolioItems.forEach(item => {
-        item.addEventListener('click', () => {
+function closeModal(modal) {
+    if (!modal) return;
+
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+}
+
+// Инициализация обработчиков событий для модальных окон
+document.addEventListener('DOMContentLoaded', () => {
+    // Открытие модальных окон при клике на проекты
+    document.querySelectorAll('[data-modal]').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
             const modalId = item.getAttribute('data-modal');
-            const modal = document.getElementById(modalId);
-            openModal(modal);
+            openModal(modalId);
         });
     });
 
-    closeProjectButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const modal = e.target.closest('.project-modal');
-            closeModal(modal);
-        });
-    });
+    // Закрытие по клику на кнопку или фон
+    document.querySelectorAll('.modal').forEach(modal => {
+        const closeButton = modal.querySelector('button');
+        if (closeButton) {
+            closeButton.addEventListener('click', () => closeModal(modal));
+        }
 
-    projectModals.forEach(modal => {
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
+            if (e.target === modal || e.target.classList.contains('fixed')) {
                 closeModal(modal);
             }
         });
     });
 
-    // Обработка контактной формы
-    const contactModal = document.querySelector('.modal');
-    const contactBtn = document.querySelector('.contact-btn');
-    const closeContactModal = document.querySelector('.close-modal');
-    const contactForm = document.getElementById('contact-form');
-
-    if (contactBtn) {
-        contactBtn.addEventListener('click', () => {
-            openModal(contactModal);
-        });
-    }
-
-    if (closeContactModal) {
-        closeContactModal.addEventListener('click', () => {
-            closeModal(contactModal);
-        });
-    }
-
-    if (contactModal) {
-        contactModal.addEventListener('click', (e) => {
-            if (e.target === contactModal) {
-                closeModal(contactModal);
-            }
-        });
-    }
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-
-            console.log('Form data:', formData);
-            
-            closeModal(contactModal);
-            contactForm.reset();
-        });
-    }
-
-    // Общий обработчик Escape для всех модальных окон
+    // Закрытие по Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            const activeProjectModal = document.querySelector('.project-modal.active');
-            if (activeProjectModal) {
-                closeModal(activeProjectModal);
-            }
-            
-            if (contactModal && contactModal.classList.contains('active')) {
-                closeModal(contactModal);
-            }
+            const activeModal = document.querySelector('.modal:not(.hidden)');
+            if (activeModal) closeModal(activeModal);
         }
     });
 });
