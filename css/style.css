@@ -50,22 +50,8 @@
 :root {
     /* Существующие переменные */
     --color-primary: #04061B;
-    --color-accent: rgba(79, 70, 229, 0.8);
     --color-text-primary: #FFFFFF;
-    --color-text-secondary: rgba(255, 255, 255, 0.8);
-    --color-button: #3624A6;
 
-    /* Новые мобильные настройки */
-    --mobile-padding: clamp(15px, 3vw, 30px);
-    --mobile-font-size-base: clamp(14px, 4vw, 16px);
-
-    /* Улучшенные существующие переменные */
-    --container-width: min(1200px, 95%);
-    --container-padding: clamp(var(--mobile-padding), 3vw, 30px);
-
-    /* Переменные для сеток */
-    --grid-gap-small: clamp(1rem, 2vw, 1.5rem);
-    --grid-gap-medium: clamp(1.5rem, 3vw, 3rem);
 }
 
 /* Базовые стили */
@@ -73,13 +59,4 @@ body {
     background-color: var(--color-primary);
     color: var(--color-text-primary);
     font-family: 'Onest', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
 }
