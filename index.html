@@ -87,7 +87,7 @@
         }
 
         :root {
-            font-size: clamp(4.67px, calc(100vw / 75), 16px);
+            font-size: clamp(4.27px, calc(100vw / 75), 16px);
         }
 
         /* Стили для dialog */
@@ -124,6 +124,7 @@
             opacity: 1;
         }
     </style>
+
 </head>
 
 <body class="bg-primary text-white">
@@ -350,213 +351,242 @@
         </footer>
     </div>
 
-
     <!-- Модальные окна -->
     <!-- НИТИ -->
-    <dialog id="project1" class="bg-transparent p-0 max-w-none w-full h-full">
+    <dialog id="project1" class="bg-transparent p-0 max-w-none w-full h-full outline-none">
         <div class="px-4 min-h-screen text-center">
             <span class="inline-block h-screen align-middle"></span>
 
-            <!-- Контент модального окна -->
             <div
                 class="modal-content inline-block border-white/10 bg-[#04061B] shadow-xl my-4 p-[2.5rem] border rounded-[1.25rem] w-full max-w-[62.5rem] text-left align-middle">
-                <!-- Кнопка закрытия -->
-                <button
-                    class="absolute top-[1.25rem] right-[1.25rem] flex justify-center items-center border border-white/10 hover:border-white/20 rounded-full w-[2.5rem] h-[2.5rem] transition-all hover:rotate-90 duration-300">
+                <button tabindex="-1"
+                    class="absolute top-[1.25rem] right-[1.25rem] flex justify-center items-center border border-white/10 hover:border-white/20 rounded-full w-[2.5rem] h-[2.5rem] transition-all hover:rotate-90 duration-300 outline-none">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L13 13M1 13L13 1" stroke="white" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </button>
 
-                <!-- Заголовок -->
-                <h3 class="mb-[1.875rem] font-mv-skifer text-[3.125rem] text-white">НИТИ</h3>
+                <div class="space-y-[1.875rem]">
+                    <h3 class="font-mv-skifer text-[3.125rem] text-white"></h3>
 
-                <!-- Изображение -->
-                <div class="mb-[1.875rem] rounded-[0.625rem] overflow-hidden">
-                    <img src="images/threads.png" alt="НИТИ" class="w-full h-auto">
-                </div>
+                    <div class="rounded-[0.625rem] overflow-hidden">
+                        <img class="w-full h-auto" alt="">
+                    </div>
 
-                <!-- О проекте -->
-                <div class="mb-[1.875rem] font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">О проекте</h4>
-                    <p class="mb-[1.25rem]">Кластер проектов по управлению современным образованием</p>
-                </div>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">О проекте</h4>
+                        <p></p>
+                    </div>
 
-                <!-- Инструменты -->
-                <div class="mb-[1.875rem] font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Использованные инструменты</h4>
-                    <ul class="space-y-[0.625rem] pl-[1.25rem] list-disc">
-                        <li>Figma</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Adobe Photoshop</li>
-                    </ul>
-                </div>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Использованные инструменты</h4>
+                        <ul class="space-y-[0.625rem] pl-[1.25rem] list-disc">
+                            <li>Figma</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Adobe Photoshop</li>
+                        </ul>
+                    </div>
 
-                <!-- Результат -->
-                <div class="font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Результат</h4>
-                    <p>Разработан современный визуальный стиль для образовательного проекта</p>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Результат</h4>
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </div>
     </dialog>
 
     <!-- КОДИИМ -->
-    <dialog id="project2" class="bg-transparent p-0 max-w-none w-full h-full">
+    <dialog id="project2" class="bg-transparent p-0 max-w-none w-full h-full outline-none">
         <div class="px-4 min-h-screen text-center">
             <span class="inline-block h-screen align-middle"></span>
+
             <div
                 class="modal-content inline-block border-white/10 bg-[#04061B] shadow-xl my-4 p-[2.5rem] border rounded-[1.25rem] w-full max-w-[62.5rem] text-left align-middle">
-                <button
-                    class="absolute top-[1.25rem] right-[1.25rem] flex justify-center items-center border border-white/10 hover:border-white/20 rounded-full w-[2.5rem] h-[2.5rem] transition-all hover:rotate-90 duration-300">
+                <button tabindex="-1"
+                    class="absolute top-[1.25rem] right-[1.25rem] flex justify-center items-center border border-white/10 hover:border-white/20 rounded-full w-[2.5rem] h-[2.5rem] transition-all hover:rotate-90 duration-300 outline-none">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L13 13M1 13L13 1" stroke="white" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </button>
 
-                <h3 class="mb-[1.875rem] font-mv-skifer text-[3.125rem] text-white">КОДИИМ</h3>
+                <div class="space-y-[1.875rem]">
+                    <h3 class="font-mv-skifer text-[3.125rem] text-white"></h3>
 
-                <div class="mb-[1.875rem] rounded-[0.625rem] overflow-hidden">
-                    <img src="images/code.png" alt="КОДИИМ" class="w-full h-auto">
-                </div>
+                    <div class="rounded-[0.625rem] overflow-hidden">
+                        <img class="w-full h-auto" alt="">
+                    </div>
 
-                <div class="mb-[1.875rem] font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">О проекте</h4>
-                    <p class="mb-[1.25rem]">Проект по искусственному интеллекту для школьников</p>
-                </div>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">О проекте</h4>
+                        <p></p>
+                    </div>
 
-                <div class="mb-[1.875rem] font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Использованные инструменты</h4>
-                    <ul class="space-y-[0.625rem] pl-[1.25rem] list-disc">
-                        <li>Figma</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Adobe Photoshop</li>
-                    </ul>
-                </div>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Использованные инструменты</h4>
+                        <ul class="space-y-[0.625rem] pl-[1.25rem] list-disc">
+                            <li>Figma</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Adobe Photoshop</li>
+                        </ul>
+                    </div>
 
-                <div class="font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Результат</h4>
-                    <p>Создан современный дизайн для образовательного проекта по AI</p>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Результат</h4>
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </div>
     </dialog>
 
     <!-- В центре науки -->
-    <dialog id="project3" class="bg-transparent p-0 max-w-none w-full h-full">
+    <dialog id="project3" class="bg-transparent p-0 max-w-none w-full h-full outline-none">
         <div class="px-4 min-h-screen text-center">
             <span class="inline-block h-screen align-middle"></span>
+
             <div
                 class="modal-content inline-block border-white/10 bg-[#04061B] shadow-xl my-4 p-[2.5rem] border rounded-[1.25rem] w-full max-w-[62.5rem] text-left align-middle">
-                <button
-                    class="absolute top-[1.25rem] right-[1.25rem] flex justify-center items-center border border-white/10 hover:border-white/20 rounded-full w-[2.5rem] h-[2.5rem] transition-all hover:rotate-90 duration-300">
+                <button tabindex="-1"
+                    class="absolute top-[1.25rem] right-[1.25rem] flex justify-center items-center border border-white/10 hover:border-white/20 rounded-full w-[2.5rem] h-[2.5rem] transition-all hover:rotate-90 duration-300 outline-none">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L13 13M1 13L13 1" stroke="white" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </button>
 
-                <h3 class="mb-[1.875rem] font-mv-skifer text-[3.125rem] text-white">В центре науки</h3>
+                <div class="space-y-[1.875rem]">
+                    <h3 class="font-mv-skifer text-[3.125rem] text-white"></h3>
 
-                <div class="mb-[1.875rem] rounded-[0.625rem] overflow-hidden">
-                    <img src="images/center.png" alt="В центре науки" class="w-full h-auto">
-                </div>
+                    <div class="rounded-[0.625rem] overflow-hidden">
+                        <img class="w-full h-auto" alt="">
+                    </div>
 
-                <div class="mb-[1.875rem] font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">О проекте</h4>
-                    <p class="mb-[1.25rem]">Проект по популяризации науки и созданию сообщества молодых учёных</p>
-                </div>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">О проекте</h4>
+                        <p></p>
+                    </div>
 
-                <div class="mb-[1.875rem] font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Использованные инструменты</h4>
-                    <ul class="space-y-[0.625rem] pl-[1.25rem] list-disc">
-                        <li>Figma</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Adobe Photoshop</li>
-                    </ul>
-                </div>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Использованные инструменты</h4>
+                        <ul class="space-y-[0.625rem] pl-[1.25rem] list-disc">
+                            <li>Figma</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Adobe Photoshop</li>
+                        </ul>
+                    </div>
 
-                <div class="font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Результат</h4>
-                    <p>Разработан фирменный стиль научного проекта</p>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Результат</h4>
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </div>
     </dialog>
 
     <!-- День физики -->
-    <dialog id="project4" class="bg-transparent p-0 max-w-none w-full h-full">
+    <dialog id="project4" class="bg-transparent p-0 max-w-none w-full h-full outline-none">
         <div class="px-4 min-h-screen text-center">
             <span class="inline-block h-screen align-middle"></span>
+
             <div
                 class="modal-content inline-block border-white/10 bg-[#04061B] shadow-xl my-4 p-[2.5rem] border rounded-[1.25rem] w-full max-w-[62.5rem] text-left align-middle">
-                <button
-                    class="absolute top-[1.25rem] right-[1.25rem] flex justify-center items-center border border-white/10 hover:border-white/20 rounded-full w-[2.5rem] h-[2.5rem] transition-all hover:rotate-90 duration-300">
+                <button tabindex="-1"
+                    class="absolute top-[1.25rem] right-[1.25rem] flex justify-center items-center border border-white/10 hover:border-white/20 rounded-full w-[2.5rem] h-[2.5rem] transition-all hover:rotate-90 duration-300 outline-none">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L13 13M1 13L13 1" stroke="white" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </button>
 
-                <h3 class="mb-[1.875rem] font-mv-skifer text-[3.125rem] text-white">День физики</h3>
+                <div class="space-y-[1.875rem]">
+                    <h3 class="font-mv-skifer text-[3.125rem] text-white"></h3>
 
-                <div class="mb-[1.875rem] rounded-[0.625rem] overflow-hidden">
-                    <img src="images/day.png" alt="День физики" class="w-full h-auto">
-                </div>
+                    <div class="rounded-[0.625rem] overflow-hidden">
+                        <img class="w-full h-auto" alt="">
+                    </div>
 
-                <div class="mb-[1.875rem] font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">О проекте</h4>
-                    <p class="mb-[1.25rem]">Проект по популяризации физики для старшеклассников в 22 городах страны</p>
-                </div>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">О проекте</h4>
+                        <p></p>
+                    </div>
 
-                <div class="mb-[1.875rem] font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Использованные инструменты</h4>
-                    <ul class="space-y-[0.625rem] pl-[1.25rem] list-disc">
-                        <li>Figma</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Adobe Photoshop</li>
-                    </ul>
-                </div>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Использованные инструменты</h4>
+                        <ul class="space-y-[0.625rem] pl-[1.25rem] list-disc">
+                            <li>Figma</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Adobe Photoshop</li>
+                        </ul>
+                    </div>
 
-                <div class="font-onest text-[1.25rem] text-white/80">
-                    <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Результат</h4>
-                    <p>Создан современный визуальный стиль образовательного проекта по физике</p>
+                    <div class="font-onest text-[1.25rem] text-white/80">
+                        <h4 class="mb-[0.9375rem] font-medium text-[1.5rem] text-white">Результат</h4>
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </div>
     </dialog>
 
+    <!-- JavaScript для модальных окон -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Анимация при скролле
-            const fadeElements = document.querySelectorAll('.fade-in');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
+            console.log('Script loaded');
 
-            fadeElements.forEach(element => {
-                observer.observe(element);
-            });
+            // Конфигурация модальных окон
+            const modalConfig = {
+                'project1': {
+                    title: 'НИТИ',
+                    image: 'images/threads.png',
+                    description: 'Кластер проектов по управлению современным образованием',
+                    result: 'Разработан современный визуальный стиль для образовательного проекта'
+                },
+                'project2': {
+                    title: 'КОДИИМ',
+                    image: 'images/code.png',
+                    description: 'Проект по искусственному интеллекту для школьников',
+                    result: 'Создан современный дизайн для образовательного проекта по AI'
+                },
+                'project3': {
+                    title: 'В центре науки',
+                    image: 'images/center.png',
+                    description: 'Проект по популяризации науки и созданию сообщества молодых учёных',
+                    result: 'Разработан фирменный стиль научного проекта'
+                },
+                'project4': {
+                    title: 'День физики',
+                    image: 'images/day.png',
+                    description: 'Проект по популяризации физики для старшеклассников в 22 городах страны',
+                    result: 'Создан современный визуальный стиль образовательного проекта по физике'
+                }
+            };
 
-            // Оптимизация загрузки логотипа
-            const logoImg = document.querySelector('.logo img');
-            if (logoImg) {
-                logoImg.loading = 'eager';
-
-                logoImg.onerror = function () {
-                    console.error('Ошибка загрузки логотипа');
-                    this.style.display = 'none';
-                };
-            }
-
-            // Функции для модальных окон
             function openModal(modalId) {
+                console.log('Opening modal:', modalId);
                 const modal = document.getElementById(modalId);
-                if (!modal) return;
+                const config = modalConfig[modalId];
+
+                if (!modal || !config) {
+                    console.log('Modal or config not found');
+                    return;
+                }
+
+                // Заполняем контент
+                // Получаем элементы внутри модального окна
+                const heading = modal.querySelector('h3');
+                const image = modal.querySelector('img');
+                const paragraphs = modal.querySelectorAll('.font-onest p');
+                const descriptionP = paragraphs[0];
+                const resultP = paragraphs[paragraphs.length - 1];  // Берем последний параграф
+
+                // Заполняем контент, проверяя наличие элементов
+                if (heading) heading.textContent = config.title;
+                if (image) {
+                    image.src = config.image;
+                    image.alt = config.title;
+                }
+                if (descriptionP) descriptionP.textContent = config.description;
+                if (resultP) resultP.textContent = config.result;
 
                 modal.showModal();
                 document.body.style.overflow = 'hidden';
@@ -565,7 +595,6 @@
             function closeModal(modal) {
                 if (!modal) return;
 
-                // Добавляем задержку для анимации
                 const modalContent = modal.querySelector('.modal-content');
                 modalContent.style.opacity = '0';
                 modalContent.style.transform = 'translateY(20px)';
@@ -573,18 +602,22 @@
                 setTimeout(() => {
                     modal.close();
                     document.body.style.overflow = '';
-                    // Сбрасываем стили для следующего открытия
                     modalContent.style.opacity = '';
                     modalContent.style.transform = '';
                 }, 300);
             }
 
-            // Добавляем атрибуты для открытия модальных окон
-            const projectCards = document.querySelectorAll('.grid > div');
-            projectCards.forEach((card, index) => {
-                card.setAttribute('data-modal', `project${index + 1}`);
-                card.addEventListener('click', () => {
-                    const modalId = card.getAttribute('data-modal');
+            // Инициализация модальных окон
+            console.log('Initializing cards');
+            const cards = document.querySelectorAll('.grid > div');
+            console.log('Found cards:', cards.length);
+
+            cards.forEach((card, index) => {
+                const modalId = `project${index + 1}`;
+                console.log('Setting up card:', modalId);
+                card.setAttribute('data-modal', modalId);
+                card.addEventListener('click', function () {
+                    console.log('Card clicked:', modalId);
                     openModal(modalId);
                 });
             });
@@ -597,54 +630,27 @@
                     closeButton.addEventListener('click', () => closeModal(modal));
                 }
 
-                // Закрытие по клику на backdrop
+                // Закрытие по клику вне модального окна
                 modal.addEventListener('click', (e) => {
-                    const dialogDimensions = modal.getBoundingClientRect();
-                    if (e.clientX < dialogDimensions.left ||
-                        e.clientX > dialogDimensions.right ||
-                        e.clientY < dialogDimensions.top ||
-                        e.clientY > dialogDimensions.bottom) {
+                    const modalContent = modal.querySelector('.modal-content');
+                    const rect = modalContent.getBoundingClientRect();
+
+                    if (!(e.clientX >= rect.left &&
+                        e.clientX <= rect.right &&
+                        e.clientY >= rect.top &&
+                        e.clientY <= rect.bottom)) {
                         closeModal(modal);
                     }
                 });
 
                 // Предотвращаем закрытие при клике на контент
-                const modalContent = modal.querySelector('.modal-content');
-                if (modalContent) {
-                    modalContent.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                    });
-                }
-
-                // Добавляем закрытие по Escape
-                modal.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape') {
-                        closeModal(modal);
-                    }
-                });
-            });
-
-            // Добавляем блокировку скролла при открытом модальном окне
-            const mutationObserver = new MutationObserver((mutations) => {
-                mutations.forEach((mutation) => {
-                    if (mutation.attributeName === 'open') {
-                        const dialog = mutation.target;
-                        if (dialog.hasAttribute('open')) {
-                            document.body.style.overflow = 'hidden';
-                        } else {
-                            document.body.style.overflow = '';
-                        }
-                    }
-                });
-            });
-
-            document.querySelectorAll('dialog').forEach((dialog) => {
-                mutationObserver.observe(dialog, {
-                    attributes: true
+                modal.querySelector('.modal-content').addEventListener('click', (e) => {
+                    e.stopPropagation();
                 });
             });
         });
     </script>
+
 </body>
 
 </html>
